@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="687.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corendon.luggage_finder.controllers.NavigationController">
+    <children>
+        <BorderPane prefHeight="511.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <StackPane fx:id="content" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
+            <left>
+                <HBox prefWidth="165.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="150.0" prefWidth="165.0">
+                                    <VBox.margin>
+                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/image.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <MenuButton fx:id="userMenuButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="184.0" style="-fx-background-color: #FFFFFF;" text="Tom">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#onEditProfileAction" text="%navigation_sidebar_drop_down_edit_profile" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onLogOutAction" text="%navigation_sidebar_drop_down_sign_out" />
+                                            </items>
+                                            <VBox.margin>
+                                                <Insets bottom="32.0" />
+                                            </VBox.margin>
+                                        </MenuButton>
+                                        <Button mnemonicParsing="false" onAction="#onHomeButtonAction" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #26a514;" text="%navigation_sidebar_button_home" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#onSearchButtonAction" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #26a514;" text="%navigation_sidebar_button_search" textFill="WHITE" />
+                                        <Button mnemonicParsing="false" onAction="#onRegisterButtonAction" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #26a514;" text="%navigation_sidebar_button_register" textFill="WHITE" />
+                                        <Button fx:id="statisticsButton" mnemonicParsing="false" onAction="#onStatisticsButtonAction" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #26a514;" text="%navigation_sidebar_button_statistics" textFill="WHITE" />
+                                        <Button fx:id="usersButton" mnemonicParsing="false" onAction="#onUsersButtonAction" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #26a514;" text="%navigation_sidebar_button_users" textFill="WHITE" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="8.0" left="8.0" right="8.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <AnchorPane prefHeight="81.0" prefWidth="176.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="178.0" text="%navigation_sidebar_version" textFill="#d81e05" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" />
+                                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="126.0" layoutY="53.0" onMouseClicked="#onSettingsMouseAction" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                                            <image>
+                                                <Image url="@../images/settings_icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="687.0" prefWidth="0.0" />
+                    </children>
+                </HBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corendon.luggage_finder.controllers.LuggageOpeningInfoController">
+    <children>
+        <VBox layoutX="7.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox spacing="10.0">
+                            <children>
+                                <TitledPane animated="false" text="%luggage_opening_info_titled_pane_general">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                            <children>
+                                                <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <Label minHeight="30.0" text="%register_label_date" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%luggage_opening_info_label_time" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_airport" textFill="#d81e05" />
+                                                <Label text="%search_table_insurance" textFill="#d81e05" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <DatePicker fx:id="dateDisplayField" editable="false" minHeight="30.0" promptText="15/11/2017" showWeekNumbers="true" />
+                                                                <TextField fx:id="timeDisplayField" editable="false" minHeight="30.0" text="14:56" />
+                                                                <TextField fx:id="airportDisplayField" editable="false" minHeight="30.0" text="Schiphol" />
+                                                <TextField fx:id="insuranceCompanyDisplayField" editable="false" minHeight="30.0" text="ANWB" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Traveler">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                            <children>
+                                                <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <Label minHeight="30.0" text="%luggage_opening_info_label_passenger_full_name" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_address" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_residency" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_zip_code" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_country" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_phone_number" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_email" textFill="#d81e05" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <TextField fx:id="nameDisplayField" editable="false" minHeight="30.0" text="John Doe" />
+                                                                <TextField fx:id="addressDisplayField" editable="false" minHeight="30.0" text="Stationsweg 33" />
+                                                                <TextField fx:id="placeDisplayField" editable="false" minHeight="30.0" text="Den Haag" />
+                                                                <TextField fx:id="areaCodeDisplayField" editable="false" minHeight="30.0" text="2592CN" />
+                                                                <TextField fx:id="countryDisplayField" editable="false" minHeight="30.0" text="Nederland" />
+                                                                <TextField fx:id="numberDisplayField" editable="false" minHeight="30.0" text="06-1234567" />
+                                                                <TextField fx:id="mailDisplayField" editable="false" minHeight="30.0" text="JohnDoe@email.nl" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="%register_titled_pane_luggage_label">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <Label minHeight="30.0" text="%register_label_label_number" textFill="#d81e05" />
+                                                                <Label minHeight="30.0" text="%register_label_flight_number" textFill="#d81e05" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <TextField fx:id="labelDisplayField" editable="false" minHeight="30.0" text="NKL-12904282" />
+                                                                <TextField fx:id="flightNumberDisplayField" editable="false" minHeight="30.0" text="GB-9304820" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                            <children>
+                                <TitledPane animated="false" text="%register_titled_pane_luggage_info">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="411.0" prefWidth="542.0">
+                                            <children>
+                                                <VBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <VBox spacing="5.0">
+                                                                    <children>
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_type" textFill="#d81e05" />
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_brand" textFill="#d81e05" />
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_primary_color" textFill="#d81e05" />
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_secondary_color" textFill="#d81e05" />
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_weight" textFill="#d81e05" />
+                                                                        <Label minHeight="30.0" minWidth="100.0" text="%register_label_measurements" textFill="#d81e05" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox spacing="5.0">
+                                                                    <children>
+                                                                        <TextField fx:id="typeDisplayField" editable="false" minHeight="30.0" text="Koffer" />
+                                                                        <TextField fx:id="brandDisplayField" editable="false" minHeight="30.0" text="Overige" />
+                                                                        <TextField fx:id="primaryColorDisplayField" editable="false" minHeight="30.0" text="Zwart" />
+                                                                        <TextField fx:id="secondaryColorDisplayField" editable="false" minHeight="30.0" text="Zwart" />
+                                                                        <TextField fx:id="weightDisplayField" editable="false" minHeight="30.0" text="25.6" />
+                                                                        <HBox spacing="3.0">
+                                                                            <children>
+                                                                                <Label alignment="CENTER_RIGHT" minHeight="30.0" minWidth="15.0" prefHeight="30.0" prefWidth="44.0" text="%luggage_opening_info_label_length" />
+                                                                                <TextField fx:id="lengthDisplayField" editable="false" minHeight="30.0" text="12" />
+                                                                                <Label alignment="CENTER_RIGHT" minHeight="30.0" minWidth="15.0" prefHeight="30.0" prefWidth="42.0" text="%luggage_opening_info_label_width" />
+                                                                                <TextField fx:id="widthDisplayField" editable="false" minHeight="30.0" text="30" />
+                                                                                <Label alignment="CENTER_RIGHT" minHeight="30.0" minWidth="15.0" text="%luggage_opening_info_label_height" />
+                                                                                <TextField fx:id="heightDisplayField" editable="false" minHeight="30.0" text="24" />
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                        </HBox>
+                                                        <Label minHeight="30.0" text="%register_label_special_characters" textFill="#d81e05" />
+                                                        <TextArea fx:id="characteristicsDisplayField" editable="false" text="&#10;Heeft stickers op de voorzijde en een klein deukje aan de achterzijde.&#10;" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="%register_titled_pane_extra">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                            <children>
+                                                <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox>
+                                                            <children>
+                                                                <Label minHeight="30.0" text="%register_label_picture" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox />
+                                                        <VBox>
+                                                            <children>
+                                                                <Button minHeight="30.0" mnemonicParsing="false" style="-fx-background-color: #26a514;" text="%register_upload_button" textFill="WHITE" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </TitledPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

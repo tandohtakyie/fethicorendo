@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="503.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corendon.luggage_finder.controllers.SettingsController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Text fill="#d81e05" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_title_layout" />
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <AnchorPane prefHeight="263.0" prefWidth="577.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="#d81e05" layoutX="36.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_title_fonts" />
+                <Text fill="#d81e05" layoutX="36.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_label_language" />
+                <Text fill="#d81e05" layoutX="36.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_label_font_size" />
+                <Text layoutX="364.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16" />
+                <Slider fx:id="sliderFontSize" layoutX="180.0" layoutY="97.0" prefHeight="14.0" prefWidth="177.0" />
+                <Text fill="#d81e05" layoutX="36.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_title_date_timezone" />
+                <Text fill="#d81e05" layoutX="36.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_label_date" />
+                <Text fill="#d81e05" layoutX="36.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_label_timezone" />
+                <DatePicker fx:id="datePicker" layoutX="180.0" layoutY="190.0" prefHeight="25.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="settingsLanguageBox" layoutX="180.0" layoutY="56.0" prefHeight="27.0" prefWidth="197.0" />
+            <ChoiceBox fx:id="settingsTimezoneBox" layoutX="180.0" layoutY="227.0" prefHeight="27.0" prefWidth="201.0" />
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </bottom>
+   <right>
+      <AnchorPane prefHeight="263.0" prefWidth="498.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#d81e05" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_title_about" />
+            <Text fill="#d81e05" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_version" wrappingWidth="400.21875" />
+            <Text fill="#d81e05" layoutX="10.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_copyright" wrappingWidth="452.67138671875" />
+            <Text fill="#d81e05" layoutX="13.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%settings_questions" wrappingWidth="445.9599609375" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

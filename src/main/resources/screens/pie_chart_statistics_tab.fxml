@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corendon.luggage_finder.controllers.StatisticsController">
+    <top>
+        <ToolBar prefHeight="48.0" prefWidth="833.0" BorderPane.alignment="CENTER">
+            <items>
+                <Text fill="#d81e05" strokeType="OUTSIDE" strokeWidth="0.0" text="%statistics_toolbar_title" />
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#onExportButtonAction" style="-fx-background-color: #26a514;" text="%statistics_toolbar_button_export" textFill="WHITE" />
+            </items>
+        </ToolBar>
+    </top>
+    <bottom>
+        <ToolBar BorderPane.alignment="CENTER">
+            <items>
+                <VBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <RadioButton mnemonicParsing="false" onAction="#onPlacesFoundRadioAction" text="%statistics_radiobutton_option_1" textFill="#d81e05" HBox.hgrow="ALWAYS">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="chartTypeToggleGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton mnemonicParsing="false" onAction="#onLuggageStatusesRadioAction" text="%statistics_radiobutton_option_2" textFill="#d81e05" toggleGroup="$chartTypeToggleGroup" HBox.hgrow="ALWAYS" />
+                                <RadioButton mnemonicParsing="false" onAction="#onLostPerDayRadioAction" text="%statistics_radiobutton_option_3" textFill="#d81e05" toggleGroup="$chartTypeToggleGroup" HBox.hgrow="ALWAYS" />
+                                <RadioButton mnemonicParsing="false" onAction="#onLostPerMonthRadioAction" text="%statistics_radiobutton_option_3" textFill="#d81e05" toggleGroup="$chartTypeToggleGroup" HBox.hgrow="ALWAYS" />
+                                <RadioButton mnemonicParsing="false" onAction="#onLostPerYearRadioAction" text="%statistics_radiobutton_option_4" textFill="#d81e05" toggleGroup="$chartTypeToggleGroup" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Text fill="#d81e05" strokeType="OUTSIDE" strokeWidth="0.0" text="%statistics_date_from" HBox.hgrow="ALWAYS" />
+                                <DatePicker fx:id="fromDatePicker" HBox.hgrow="ALWAYS" />
+                                <Text fill="#d81e05" strokeType="OUTSIDE" strokeWidth="0.0" text="%statistics_date_to" HBox.hgrow="ALWAYS" />
+                                <DatePicker fx:id="toDatePicker" HBox.hgrow="ALWAYS" />
+                                <Button mnemonicParsing="false" onAction="#onGenerateButtonAction" style="-fx-background-color: #26a514;" text="%statistics_generate_button" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </items>
+        </ToolBar>
+    </bottom>
+   <center>
+      <PieChart fx:id="pieChart" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

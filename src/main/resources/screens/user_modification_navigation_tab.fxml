@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corendon.luggage_finder.controllers.UserModificationNavigationTabController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TabPane fx:id="userTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="%user_modification_navigation_tab_information">
+                            <content>
+                                <AnchorPane fx:id="detailsAnchorPane" minHeight="0.0" minWidth="0.0" />
+                            </content>
+                        </Tab>
+                        <Tab text="%user_modification_navigation_tab_permissions">
+                            <content>
+                                <AnchorPane fx:id="permissionsAnchorPane" minHeight="0.0" minWidth="0.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+            <top>
+                <ToolBar nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
+                    <items>
+                        <Button mnemonicParsing="false" onAction="#onBackButtonAction" style="-fx-background-color: #26a514;" text="%general_button_back" textFill="WHITE" />
+                    </items>
+                </ToolBar>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>
